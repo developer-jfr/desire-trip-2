@@ -10,6 +10,7 @@
 body {
   position: relative;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* =================== Custom Scrollbar Start ====================== */
@@ -1086,6 +1087,14 @@ body {
     background: transparent;
     padding: 0;
     padding-top: 10px;
+  }
+
+  .gallery {
+    padding-bottom: 50px;
+  }
+
+  .testimonials h2 {
+    padding-top: 50px;
   }
 
   .testimonials-swiper {
