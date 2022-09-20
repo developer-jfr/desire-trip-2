@@ -1,3 +1,25 @@
+//====================== Navbar Close Start ========================
+
+const navItems = document.querySelectorAll('.nav-item');
+const navbarContent = document.querySelector('.navbar-collapse');
+
+
+navItems.forEach(el => {
+  el.addEventListener('click', function() {
+    navbarContent.classList.remove('show')
+  })
+})
+
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarImg = document.querySelector('.navbar-img');
+
+navbarImg.addEventListener('click', function() {
+  navbarImg.classList.toggle('active');
+})
+
+//===================== Navbar Close End ==========================
+
+
 /*==================== First Slider Start  ====================*/
 
 let swiper = new Swiper(".slider-1", {
@@ -14,9 +36,12 @@ let swiper = new Swiper(".slider-1", {
       slidesPerView: 1.4,
     },
     400: {
-      slidesPerView: 2.6,
+      slidesPerView: 1.4,
       spaceBetween: 40,
     },
+    900: {
+      slidesPerView: 2.6,
+    }
   },
   navigation: {
     nextEl: ".button-next",
@@ -156,32 +181,17 @@ sr.reveal(`.about-text, .journey-sc-img, .journey-content, .card-2, .partner-ite
 /* ======================= Video Lazy Loading Start =========================== */
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
-  if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
-        if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-              videoSource.src = videoSource.dataset.src;
-            }
-          }
+window.onload = function() {
+  setTimeout(() => {
+    var videoOne = document.querySelector('.video-1');
+    var videoTwo = document.querySelector('.video-2');
 
-          video.target.load();
-          video.target.classList.remove("lazy");
-          lazyVideoObserver.unobserve(video.target);
-        }
-      });
-    });
+    videoTwo.classList.remove('video-hide');
+    videoOne.classList.add('video-hide')
+  }, 7000)
+}
 
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
 
 
 /* ======================= Video Lazy Loading End  =========================== */

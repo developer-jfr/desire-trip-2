@@ -30,18 +30,18 @@
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <div class="navbar-img"></div>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto  mb-2 mb-lg-0 " style="margin:0 auto;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">How we work</a>
+              <a class="nav-link" aria-current="page" href="#about">How we work</a>
             </li>
             <li class="nav-item ms-5 me-5">
-              <a class="nav-link" href="#">Experiences</a>
+              <a class="nav-link" href="#experience">Experiences</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Destination</a>
+              <a class="nav-link" href="#destination">Destination</a>
             </li>
           </ul>
           <form class="d-flex nav-form" role="search">
@@ -63,8 +63,11 @@
     <div class="main-landing">
       <div class="landing">
         <div class="landing-content">
-          <video class="landing-video lazy" width="100%" height="100%" id="background-video" autoplay loop muted>
-            <source data-src="./assets/images/video.mp4" type="video/mp4">
+          <video class="landing-video video-1 " width="100%" height="100%" id="background-video" autoplay loop muted>
+            <source src="./assets/videos/desire_trip_video.mp4" type="video/mp4">
+          </video>
+          <video class="landing-video video-2 video-hide" width="100%" height="100%" id="background-video" autoplay loop muted>
+            <source src="./assets/videos/desire_trip_video_2.mp4" type="video/mp4">
           </video>
           <div class="landing-tx">
             <h2>Desire Trip</h2>
@@ -145,7 +148,7 @@
       </div>
       <!---------------------- About Us Start ------------------------------>
   
-      <div class="about-us d-flex">
+      <div id="about" class="about-us d-flex">
         <h2 class="about-title"><span>About</span> Desire Trip</h2>
         <div>
           <div class="about-text">
@@ -193,7 +196,7 @@
   
     <!--------------------- Journey Start --------------------------->
   
-    <div class="journey">
+    <div id="experience" class="journey">
       <div class="journey-info  d-flex align-items-center">
         <div class="journey-img-groups">
           <img class="journey-fs-img" src="./assets/images/journey-1.png" alt="journey-1">
@@ -291,7 +294,7 @@
   
   
     <!--------------------- Destination Start ---------------------------->
-    <div class="destination">
+    <div id="destination" class="destination">
       <div class="ds-carousel-wrapp">
         <h2 class="ds-title">our <span>Destination</span></h2>
         <div class="ds-carousel position-relative">
