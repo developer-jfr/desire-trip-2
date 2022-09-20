@@ -1,0 +1,1137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* =================== Custom Scrollbar Start ====================== */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+/* =================== Custom Scrollbar End  ====================== */
+
+/* ================== Navbar Start ======================== */
+
+
+.custom-navbar {
+  background: #000000 !important;
+  padding-inline: 10%;
+  padding-right: 12%;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contact-us-btn {
+  background: #E58620;
+  border: none;
+  outline: none;
+  padding: 10px 35px;
+  letter-spacing: 0.02em;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.contact-us-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================== Navbar End ======================== */
+
+/* ================= Landing Start ==================== */
+
+.main-landing {
+  background: url('../images/banner-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing {
+  display: grid;
+  grid-template-columns: 3fr .4fr;
+  height: 100vh;
+}
+
+.landing-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.landing-video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.landing-content div {
+  margin-top: -150px;
+  z-index: 10;
+  text-align: center;
+}
+
+.landing-content div h2 {
+  font-size: 70px;
+}
+
+.landing-content div p {
+  font-size: 20px;
+}
+
+.help-center-form {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  transition: all .5s ease-in-out;
+}
+
+.help-center {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background-color: #1E1E1E;
+  padding: 10px 35px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  transform: rotate(-90deg);
+  margin-right: -66px;
+}
+
+.help-center span {
+  color: #F78F1E;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 340px;
+  height: auto;
+  padding-block: 40px;
+}
+
+.contact-form-content {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form-content h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.contact-form-content p {
+  color: #D6943C;
+  font-size: 14px;
+}
+
+.contact-form-content div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-form-content div span {
+  background-color: #191919;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 45px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.show {
+  display: block !important;
+}
+
+
+.show-top {
+  top: 20%;
+}
+
+
+/* ================= Landing End ==================== */
+
+
+/* ================= First Slider Start =======================*/
+
+
+
+.slider-1-arrows {
+  z-index: 999;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+.first-slider {
+  padding-left: 800px;
+  margin-top: -4%;
+  width: 100%;
+  position: relative;
+}
+
+
+
+
+.fs-slide img {
+  width: 100%;
+  height: 120%;
+}
+
+/* ================= First Slider End =======================*/
+
+
+/* ==================== About Us Start  ========================  */
+
+.about-us {
+  padding-block: 100px;
+  padding-inline: 12%;
+  align-items: flex-start;
+  gap: 200px;
+  color: #fff;
+}
+
+.about-us h2 {
+  white-space: nowrap;
+}
+
+.about-us h2 span {
+  color: #E58620;
+}
+
+.about-us div div:nth-child(1) {
+  font-family: 'Montserrat', sans-serif;
+  color: #C7C7C7;
+  line-height: 150%;
+}
+
+.about-us-items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.about-us-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.about-us-item h3 {
+  color: #E58620;
+  font-size: 40px;
+}
+
+.about-us-item span {
+  font-size: 14px;
+  color: #797979;
+}
+
+/* ==================== About Us End ============================== */
+
+/* ==================== Journey Start =============================== */
+
+.journey {
+  padding-bottom: 350px;
+}
+
+.journey-info {
+  background: #fff;
+  padding-inline: 12%;
+  gap: 140px;
+  padding-bottom: 120px;
+}
+
+.journey-content {
+  margin-bottom: -110px;
+}
+
+.journey-content h2 {
+  text-transform: uppercase;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+
+.journey-content h2 span {
+  color: #E58620;
+}
+
+.journey-content p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.journey-img-groups {
+  position: relative;
+}
+
+.journey-img-groups img:nth-child(1) {
+  height: 450px;
+  width: 360px;
+  margin-top: -50px;
+}
+
+.journey-img-groups img:nth-child(2) {
+  position: absolute;
+  bottom: -60px;
+  right: -25px;
+  height: 70%;
+  width: 60%;
+}
+
+
+.journey-slide h2 {
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.journey-slide p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #606060;
+  width: 95%;
+}
+
+.journey-slide div {
+  text-transform: uppercase;
+  color: #E58620;
+}
+
+
+.journey-arrow-left {
+  position: absolute;
+  top: 38%;
+  left: 7%;
+}
+
+.journey-arrow-right {
+  position: absolute;
+  top: 38%;
+  right: 7%;
+}
+
+
+/* ==================== Journey End =============================== */
+
+/* ==================== Destination Start =============================== */
+
+.mobile-arrows-ds {
+  display: none;
+}
+
+
+.destination {
+  background: url('../images/destination-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.ds-carousel-wrapp {
+  position: relative;
+  top: -200px;
+}
+
+
+.destination div:nth-child(1) h2 {
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.destination div:nth-child(1) h2 span {
+  color: #E58620;
+}
+
+.destination-slider-img {
+  width: 100% !important;
+  height: 550px !important;
+  margin-bottom: 150px;
+  z-index: -1;
+}
+
+.ds-slider div {
+  position: relative;
+}
+
+.destination-slider-tx {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  z-index: 999;
+  background: #161616;
+  padding: 20px;
+  width: 60%;
+
+
+}
+
+/* ==================== Destination End =============================== */
+
+/* ==================== Gallery Start =============================== */
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 3fr .5fr;
+  padding-inline: 10%;
+  padding-bottom: 200px;
+  gap: 50px;
+}
+
+.gallery-collection-content {
+  color: #fff;
+  text-align: left !important;
+}
+
+.gallery-collection-content h2 {
+  text-align: left !important;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+
+.gallery-collection-content p {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #C7C7C7;
+}
+
+.gallery-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.gallery-group {
+  padding-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+
+.gallery-card-img {
+  transition: .3s;
+}
+
+.gallery-card-img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gallery-data h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.gallery-data a {
+  text-decoration: none;
+  color: #E58620;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 140%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ==================== Gallery End =============================== */
+
+/* ==================== Testimonials Start =============================== */
+
+.testimonials h2 {
+  padding-top: 120px;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+
+.testimonials h2 span {
+  color: #E58620;
+
+}
+
+.ts-slide {
+  width: 100%;
+}
+
+.ts-slide img {
+  width: 100%;
+}
+
+.ts-slide p {
+  font-size: 12px;
+  background: #161616;
+  opacity: 0.95;
+  border-radius: 4px;
+  color: #C7C7C7;
+  padding: 15px;
+  line-height: 150%;
+  width: 250px;
+  height: 185px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -90px;
+  display: flex;
+  align-items: center;
+}
+
+.ts-slide p::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: 40%;
+  background: url('../images/testimonials-66.svg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+/* ==================== Testimonials End =============================== */
+
+/* ==================== Partners Start =============================== */
+
+.partners h2 {
+  white-space: nowrap;
+  text-align: center;
+  padding-top: 50px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #242424;
+}
+
+.partners h2 span {
+  color: #E58620;
+}
+
+.partners-group {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-group div {
+  gap: 60px;
+}
+
+.partners-group div img {
+  width: 168px;
+  filter: grayscale(1);
+  transition: .3s;
+}
+
+.partners-group div img:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.vertical-line {
+  height: 160px;
+  width: 1px;
+  background: #EBEBEB;
+}
+
+/* ==================== Partners End =============================== */
+
+
+/* ==================== Footer Start =============================== */
+
+.footer {
+  background: #000;
+  padding-inline: 8%;
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-form-tx {
+  color: #fff;
+}
+
+.footer-form-tx h2 {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 140%;
+  color: #F7F7F7;
+
+}
+
+.footer-form-tx h2 span {
+  color: #E58620;
+}
+
+.footer-form-tx p {
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  color: #A6A6A6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-input {
+  background: #111111;
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: #D7D7D7;
+  border-radius: 5px 5px 0 0;
+  width: 264px;
+  transition: .5s;
+}
+
+.footer-input:focus {
+  border-bottom: 1px solid #E58620;
+}
+
+.footer-btn {
+  margin-top: 10px;
+  width: 202px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-social {
+  padding-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #DADADA;
+  position: relative;
+}
+
+.footer-social::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #282828;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.copyright p {
+  color: #DADADA;
+}
+
+.copyright-links a {
+  text-decoration: none;
+  color: #DADADA;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* ==================== Footer End =============================== */
+
+/* ===================== Responsive ==================================*/
+
+@media screen and (max-width: 1400px) {
+  .gallery {
+    padding-inline: 2%;
+  }
+
+  .destination-slider-tx {
+    width: 80%;
+    bottom: 120px;
+  }
+
+  .slider-3 {
+    margin-inline: 90px !important;
+  }
+
+  .ds-arrow-left,
+  .ds-arrow-right {
+    display: none;
+  }
+
+  .mobile-arrows-ds {
+    display: block;
+  }
+
+  .partners-group div img {
+    width: 140px;
+  }
+
+  .footer {
+  padding-inline: 4%;
+  
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .custom-navbar {
+    padding-left: 0;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .first-slider {
+    padding-left: 500px;
+  }
+
+  .slider-1-arrows {
+    left: 32%;
+  }
+
+  .landing-content div h2 {
+    font-size: 50px;
+  }
+
+  .landing-content div p {
+    font-size: 18px;
+  }
+
+  .about-us {
+    padding-inline: 8%;
+    gap: 50px;
+  }
+
+  .journey-info {
+    padding-inline: 5%;
+    gap: 90px;
+  }
+
+  .slider-2 {
+    margin-inline: 90px !important;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-arrow-right,
+  .journey-arrow-left {
+    display: none;
+  }
+
+
+  .slider-3 {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .partners-group div img {
+    width: 100px;
+  }
+
+  .partners-group div {
+   gap: 50px;
+  
+  }
+
+  .vertical-line {
+    height: 100px;
+  }
+}
+
+
+@media screen and (max-width: 990px) {
+  .custom-navbar {
+    padding-inline: 5%;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .nav-item:nth-child(2) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+    padding-block: 20px;
+    text-align: center;
+  }
+
+  .nav-form {
+    display: none !important;
+  }
+
+  .landing {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-content div h2 {
+    font-size: 30px;
+  }
+
+  .landing-content div p {
+    font-size: 16px;
+  }
+
+  .slider-1-arrows {
+    display: none;
+  }
+
+  .first-slider {
+    padding-left: 200px;
+    margin-top: -10%;
+  }
+
+  .about-us {
+    padding-inline: 8%;
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .help-center-form {
+    display: none;
+  }
+
+
+  .contact-form-content h2 {
+    text-align: center;
+  }
+
+  .contact-form-content p {
+    text-align: center;
+  }
+
+  .about-us {
+    align-items: center;
+    padding-inline: 10px;
+    gap: 25px;
+    text-align: center;
+  }
+
+
+  .about-us-item h3 {
+    font-size: 20px;
+  }
+
+  .about-us-item span {
+    font-size: 10px;
+  }
+
+  .about-us div div:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .journey {
+    padding-bottom: 100px;
+  }
+
+  .journey-info {
+    flex-direction: column;
+  }
+
+
+  .journey-img-groups img:nth-child(1) {
+    width: 100%;
+    height: auto;
+    margin-left: -5px;
+  }
+
+  .journey-img-groups img:nth-child(2) {
+    width: 60%;
+    height: auto;
+    right: -5px;
+  }
+
+  .jn-btn {
+    width: 100%;
+  }
+
+  .journey-content {
+    text-align: center;
+  }
+
+  .journey-content h2 {
+    font-size: 18px;
+  }
+
+  .journey-content p {
+    font-size: 14px;
+  }
+
+  .journey-slide h2 {
+    font-size: 18px;
+  }
+
+  .journey-slide p {
+    font-size: 10px;
+  }
+
+  .journey-slide div {
+    font-size: 14px;
+  }
+
+  .slider-3 {
+    margin-inline: 50px !important;
+  }
+
+  .destination-slider-tx {
+    width: 90%;
+    font-size: 10px;
+    bottom: -30px;
+  }
+
+  .slider-3-wrapper {
+    margin-bottom: 10px;
+    margin-top: 8%;
+  }
+
+  .destination-slider-img {
+    margin-bottom: 50px;
+  }
+
+  .destination-slider-img {
+    height: auto !important;
+  }
+
+  .gallery-card-img {
+    width: 100%;
+  }
+
+  .gallery-data {
+    bottom: .5rem;
+    left: .5rem;
+  }
+
+  .destination div:nth-child(1) h2 {
+    font-size: 16px;
+  }
+
+  .gallery {
+    padding-inline: 5%;
+  }
+
+  .gallery-data h2 {
+    font-size: 16px;
+  }
+
+  .gallery-data a {
+    font-size: 10px;
+  }
+
+  .testimonials-swiper {
+    margin-inline: 50px !important;
+  }
+
+  .ts-slide p {
+    width: 95%;
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+
+  .footer-form {
+    flex-direction: column;
+  }
+  
+  .footer-input {
+    width: 100%;
+  }
+
+  .copyright {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .custom-navbar {
+    padding-inline: 0;
+  }
+
+  .landing {
+    height: 60vh;
+  }
+
+  .landing-content div {
+    margin-top: 0;
+  }
+
+  .first-slider {
+    padding-left: 50px;
+  }
+
+  .slider-2 {
+    margin-inline: 0 !important;
+  }
+
+  .slider-3 {
+    margin-inline: 10px !important;
+  }
+
+  .ds-carousel-wrapp {
+    top: -50px;
+  }
+
+  .journey-slide h2 {
+    font-weight: 600;
+  }
+
+  .journey-slide h2,
+  .journey-slide p,
+  .journey-slide div {
+    padding-left: 10px;
+  }
+
+  .destination-slider-img {
+    margin-bottom: 0;
+  }
+
+  .destination-slider-tx {
+    display: block;
+    position: initial;
+    transform: none;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .testimonials-swiper {
+    margin-inline: 10px !important;
+  }
+
+  .testimonials h2 {
+    white-space: initial;
+  }
+  
+  .partners h2 {
+    font-size: 30px;
+  }
+
+  .pr-images {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partners-group {
+    position: relative;
+  }
+
+  .partners-group div img {
+    width: 140px;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+  .footer-inputs div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+
+  .copyright p {
+    font-size: 12px;
+  }
+
+  .footer-social div p {
+    font-size: 12px;
+  }
+}
+
+
