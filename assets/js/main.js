@@ -187,7 +187,6 @@ window.onload = function () {
  
     videoOne.addEventListener('ended',myHandler,false);
     function myHandler(e) {
-      alert('working')
       videoTwo.classList.remove("video-hide");
       videoTwo.classList.add("active-video");
       videoOne.classList.add("video-hide");
