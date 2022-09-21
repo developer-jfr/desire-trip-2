@@ -13,7 +13,6 @@ navItems.forEach((el) => {
 
 const navbarToggler = document.querySelector(".navbar-toggler");
 
-
 navbarImg.addEventListener("click", function () {
   navbarImg.classList.toggle("active");
 });
@@ -184,50 +183,50 @@ sr.reveal(
 
 window.onload = function () {
   setTimeout(() => {
-    var videoOne = document.querySelector(".video-1");
-    var videoTwo = document.querySelector(".video-2");
+    var video = document.querySelector('.video-1');
+   var videoSource = document.getElementById('video-sr');
+   if(video.played) {
+    function playVideo(videoSource, type) {
+      var videoElm = document.querySelector('.video-1');
+      var videoSourceElm = document.getElementById('video-sr'); 
+       if (!videoElm.paused) {
+            videoElm.pause();
+         }
+        
+       videoSourceElm.src = './assets/videos/desire_trip_video_2.mp4';
+       videoSourceElm.type = 'video/mp4';
+      
+        videoElm.load();
+        videoElm.play();
+      }
 
-    videoTwo.classList.remove("video-hide");
-    videoTwo.classList.add("active-video");
-    videoOne.classList.add("video-hide");
-    videoTwo.classList.remove("active-video");
-    videoTwo.play();
+      playVideo()
+   }
 
-
-    if(videoOne.muted) {
-      videoTwo.muted = true
-    } else {
-      videoTwo.muted = false
-    }
   }, 7000);
 };
 
 /* ======================= Video Lazy Loading End  =========================== */
 
 /* ======================= Video Play Start =========================== */
+//./assets/videos/desire_trip_video_2.mp4
 
-document.querySelectorAll("video").forEach((el) => {
-  var ppbutton = document.getElementById("play-btn");
-  var muted = document.getElementById("muted");
-  ppbutton.addEventListener("click", function () {
-    if (el.paused) {
-      el.play();
-      muted.classList.add('disabled-mute')
-    } else {
-      el.pause();
-      muted.classList.remove('disabled-mute')
-    } 
-  });
-
-  muted.addEventListener("click", function () {
-    if (el.paused && el.muted === true) {
-      el.muted = true
-    } else if (el.muted === true) {
-      el.muted = false
-    } else {
-      el.muted = true
-    }
-  });
+var el = document.querySelector(".active-video");
+var ppbutton = document.getElementById("play-btn");
+var muted = document.getElementById("muted");
+ppbutton.addEventListener("click", function () {
+  if (el.paused) {
+    el.play();
+  } else {
+    el.pause();
+  }
 });
 
+muted.addEventListener("click", function () {
+  if (el.muted === true) {
+    el.muted = false;
+  } else {
+    el.muted = true;
+  }
+});
 /* ======================= Video Play End  =========================== */
