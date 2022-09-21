@@ -1,24 +1,22 @@
 //====================== Navbar Close Start ========================
 
-const navItems = document.querySelectorAll('.nav-item');
-const navbarContent = document.querySelector('.navbar-collapse');
+const navItems = document.querySelectorAll(".nav-item");
+const navbarContent = document.querySelector(".navbar-collapse");
 
+navItems.forEach((el) => {
+  el.addEventListener("click", function () {
+    navbarContent.classList.remove("show");
+  });
+});
 
-navItems.forEach(el => {
-  el.addEventListener('click', function() {
-    navbarContent.classList.remove('show')
-  })
-})
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarImg = document.querySelector(".navbar-img");
 
-const navbarToggler = document.querySelector('.navbar-toggler');
-const navbarImg = document.querySelector('.navbar-img');
-
-navbarImg.addEventListener('click', function() {
-  navbarImg.classList.toggle('active');
-})
+navbarImg.addEventListener("click", function () {
+  navbarImg.classList.toggle("active");
+});
 
 //===================== Navbar Close End ==========================
-
 
 /*==================== First Slider Start  ====================*/
 
@@ -41,7 +39,7 @@ let swiper = new Swiper(".slider-1", {
     },
     900: {
       slidesPerView: 2.6,
-    }
+    },
   },
   navigation: {
     nextEl: ".button-next",
@@ -170,28 +168,57 @@ sr.reveal(
   }
 );
 
-sr.reveal(`.about-text, .journey-sc-img, .journey-content, .card-2, .partner-item, .footer-inputs`, {
-  origin: "right",
-  interval: 100,
-});
+sr.reveal(
+  `.about-text, .journey-sc-img, .journey-content, .card-2, .partner-item, .footer-inputs`,
+  {
+    origin: "right",
+    interval: 100,
+  }
+);
 
 /*==================== Scroll Reveal Animation End ====================*/
 
-
 /* ======================= Video Lazy Loading Start =========================== */
 
-
-
-window.onload = function() {
+window.onload = function () {
   setTimeout(() => {
-    var videoOne = document.querySelector('.video-1');
-    var videoTwo = document.querySelector('.video-2');
+    var videoOne = document.querySelector(".video-1");
+    var videoTwo = document.querySelector(".video-2");
 
-    videoTwo.classList.remove('video-hide');
-    videoOne.classList.add('video-hide')
-  }, 7000)
-}
-
-
+    videoTwo.classList.remove("video-hide");
+    videoTwo.classList.add("active-video");
+    videoOne.classList.add("video-hide");
+    videoTwo.classList.remove("active-video");
+    videoTwo.play()
+  }, 7000);
+};
 
 /* ======================= Video Lazy Loading End  =========================== */
+
+/* ======================= Video Play Start =========================== */
+
+document.querySelectorAll("video").forEach((el) => {
+  var ppbutton = document.getElementById("play-btn");
+  var muted = document.getElementById("muted");
+  ppbutton.addEventListener("click", function () {
+    if (el.paused) {
+      el.play();
+      muted.classList.add('disabled-mute')
+    } else {
+      el.pause();
+      muted.classList.remove('disabled-mute')
+    } 
+  });
+
+  muted.addEventListener("click", function () {
+    if (el.paused && el.muted === true) {
+      el.muted = true
+    } else if (el.muted === true) {
+      el.muted = false
+    } else {
+      el.muted = true
+    }
+  });
+});
+
+/* ======================= Video Play End  =========================== */

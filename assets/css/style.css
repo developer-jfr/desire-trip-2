@@ -99,6 +99,33 @@ body {
 
 /* ================= Landing Start ==================== */
 
+.disabled-mute {
+  pointer-events: none;
+}
+
+
+#play-btn {
+  transition: .5s ;
+  width: 70px;
+}
+
+#play-btn:hover {
+  transform: scale(1.05);
+}
+
+.selectextShadowHost {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#muted {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 999;
+  width: 20px;
+}
+
 .main-landing {
   background: url('../images/banner-bg.png');
   background-repeat: no-repeat;
@@ -132,9 +159,10 @@ body {
 }
 
 .landing-content div {
-  margin-top: -150px;
+  margin-top: -50px;
   z-index: 10;
   text-align: center;
+  transition:all 10s;
 }
 
 .landing-content div h2 {
@@ -1090,6 +1118,7 @@ body {
 
   .slider-2 {
     margin-inline: 0 !important;
+    margin-left: 10px !important;
   }
 
   .slider-3 {
@@ -1104,11 +1133,7 @@ body {
     font-weight: 600;
   }
 
-  .journey-slide h2,
-  .journey-slide p,
-  .journey-slide div {
-    padding-left: 10px;
-  }
+  
 
   .destination-slider-img {
     margin-bottom: 0;
@@ -1179,6 +1204,11 @@ body {
 
   .footer-social div p {
     font-size: 12px;
+  }
+
+  #muted {
+    left: 1rem;
+    bottom: 3rem;
   }
 }
 
