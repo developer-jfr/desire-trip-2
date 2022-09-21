@@ -107,6 +107,7 @@ body {
 #play-btn {
   transition: .5s ;
   width: 70px;
+  cursor: pointer;
 }
 
 #play-btn:hover {
@@ -124,6 +125,7 @@ body {
   left: 1.5rem;
   z-index: 9999;
   width: 20px;
+  cursor: pointer;
 }
 
 .main-landing {
