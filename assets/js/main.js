@@ -184,23 +184,19 @@ window.onload = function () {
   setTimeout(() => {
     var videoOne = document.querySelector(".video-1");
     var videoTwo = document.querySelector(".video-2");
- 
-    videoOne.addEventListener('ended',myHandler,false);
-    function myHandler(e) {
-      videoTwo.classList.remove("video-hide");
-      videoTwo.classList.add("active-video");
-      videoOne.classList.add("video-hide");
-      videoTwo.classList.remove("active-video");
-      videoTwo.play()
 
-      if(videoOne.muted === false) {
-        videoTwo.muted = false
-      } else {
-        console.log('false')
-      }
+    videoTwo.classList.remove("video-hide");
+    videoTwo.classList.add("active-video");
+    videoOne.classList.add("video-hide");
+    videoTwo.classList.remove("active-video");
+    videoTwo.play();
+
+
+    if(videoOne.muted) {
+      videoTwo.muted = true
+    } else {
+      videoTwo.muted = false
     }
-
-    
   }, 7000);
 };
 
@@ -214,7 +210,7 @@ document.querySelectorAll("video").forEach((el) => {
   ppbutton.addEventListener("click", function () {
     if (el.paused) {
       el.play();
-      muted.classList.add('disabled-mute');
+      muted.classList.add('disabled-mute')
     } else {
       el.pause();
       muted.classList.remove('disabled-mute')
