@@ -1139,6 +1139,9 @@ body {
 
   .destination-slider-img {
     margin-bottom: 0;
+    object-fit: cover;
+    object-position: right;
+    height: 400px !important;
   }
 
   .destination-slider-tx {
@@ -1149,6 +1152,7 @@ body {
     background: transparent;
     padding: 0;
     padding-top: 10px;
+    font-size: 15px;
   }
 
   .gallery {
