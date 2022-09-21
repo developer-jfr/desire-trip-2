@@ -217,16 +217,20 @@ var muted = document.getElementById("muted");
 ppbutton.addEventListener("click", function () {
   if (el.paused) {
     el.play();
+    ppbutton.src = './assets/images/pause-btn.svg'
   } else {
     el.pause();
+    ppbutton.src = './assets/images/play.svg'
   }
 });
 
 muted.addEventListener("click", function () {
   if (el.muted === true) {
     el.muted = false;
+    muted.src = './assets/images/unmute.svg'
   } else {
     el.muted = true;
+    muted.src = './assets/images/muted.svg'
   }
 });
 /* ======================= Video Play End  =========================== */
