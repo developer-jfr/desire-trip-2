@@ -184,7 +184,6 @@ sr.reveal(
 window.onload = function () {
   setTimeout(() => {
     var video = document.querySelector('.video-1');
-   var videoSource = document.getElementById('video-sr');
    if(video.played) {
     function playVideo(videoSource, type) {
       var videoElm = document.querySelector('.video-1');
@@ -196,7 +195,8 @@ window.onload = function () {
        videoSourceElm.src = './assets/videos/desire_trip_video_2.mp4';
        videoSourceElm.type = 'video/mp4';
       
-        videoElm.load();
+       
+          videoElm.load();
         videoElm.play();
       }
 
@@ -224,6 +224,8 @@ ppbutton.addEventListener("click", function () {
   }
 });
 
+
+
 muted.addEventListener("click", function () {
   if (el.muted === true) {
     el.muted = false;
@@ -235,12 +237,13 @@ muted.addEventListener("click", function () {
 });
 
 
-fraction = 0.5;
+
+
+fraction = 0.99;
 function checkScroll() {
 
     
         var video = el;
-        var videoSourceElm = document.getElementById('video-sr'); 
         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
             b = y + h, //bottom
             visibleX, visibleY, visible;
@@ -253,10 +256,7 @@ function checkScroll() {
             if (visible > fraction) {
                 ppbutton.src = './assets/images/play.svg'
                 video.pause()
-            } else {
-                video.pause();
-                ppbutton.src = './assets/images/play.svg'
-            }
+            } 
 
 }
 
