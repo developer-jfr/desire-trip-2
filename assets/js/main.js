@@ -92,9 +92,9 @@ let thSwiper = new Swiper(".slider-3", {
   spaceBetween: 30,
   grabCursor: true,
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
+    nextEl: ".mb-prev",
+    prevEl: ".mb-next",
+  }
 });
 
 /*==================== Fourth Slider End  ====================*/
