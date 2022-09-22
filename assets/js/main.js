@@ -183,21 +183,23 @@ sr.reveal(
 
 window.onload = function () {
   setTimeout(() => {
-    var video = document.querySelector('.video-1');
+    var video = document.querySelector('.active-video');
    if(video.played) {
     function playVideo(videoSource, type) {
-      var videoElm = document.querySelector('.video-1');
+      var videoElm = document.querySelector('.active-video');
       var videoSourceElm = document.getElementById('video-sr'); 
-       if (!videoElm.paused) {
+       if (videoElm.paused) {
             videoElm.pause();
-         }
-        
-       videoSourceElm.src = './assets/videos/desire_trip_video_2.mp4';
+         } else {
+          videoSourceElm.src = './assets/videos/desire_trip_video_2.mp4';
        videoSourceElm.type = 'video/mp4';
       
        
           videoElm.load();
         videoElm.play();
+         }
+        
+       
       }
 
       playVideo()
@@ -210,6 +212,9 @@ window.onload = function () {
 
 /* ======================= Video Play Start =========================== */
 //./assets/videos/desire_trip_video_2.mp4
+
+
+
 
 var el = document.querySelector(".active-video");
 var ppbutton = document.getElementById("play-btn");
@@ -235,6 +240,9 @@ muted.addEventListener("click", function () {
     muted.src = './assets/images/muted.svg'
   }
 });
+
+
+
 
 
 
