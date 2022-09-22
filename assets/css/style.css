@@ -103,6 +103,30 @@ body {
   pointer-events: none;
 }
 
+.video-control {
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 10px;
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+.video-control img:nth-child(2) {
+  width: 20px;
+  height: 20px;
+}
+
+.video-control img:nth-child(1) {
+  width: 40px;
+  height: 40px;
+}
+
+#muted {
+  cursor: pointer;
+}
+
 
 #play-btn {
   transition: .5s ;
@@ -119,14 +143,7 @@ body {
   visibility: hidden !important;
 }
 
-#muted {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 9999;
-  width: 20px;
-  cursor: pointer;
-}
+
 
 .main-landing {
   background: url('../images/banner-bg.png');
@@ -1270,8 +1287,8 @@ body {
     font-size: 12px;
   }
 
-  #muted {
-    left: 1rem;
+.video-control {
+    left: 0;
     bottom: 3rem;
   }
   
