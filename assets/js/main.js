@@ -252,6 +252,7 @@ function checkScroll() {
 
             if (visible > fraction) {
                 ppbutton.src = './assets/images/play.svg'
+                video.pause()
             } else {
                 video.pause();
                 ppbutton.src = './assets/images/play.svg'
