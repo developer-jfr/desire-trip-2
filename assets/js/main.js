@@ -251,11 +251,10 @@ function checkScroll() {
             visible = visibleX * visibleY / (w * h);
 
             if (visible > fraction) {
-                video.play();
-                videoSourceElm.src = './assets/pause-btn/play.svg'
+                ppbutton.src = './assets/images/play.svg'
             } else {
                 video.pause();
-                videoSourceElm.src = './assets/images/play.svg'
+                ppbutton.src = './assets/images/play.svg'
             }
 
 }
