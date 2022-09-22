@@ -240,7 +240,7 @@ function checkScroll() {
 
     
         var video = el;
-
+        var videoSourceElm = document.getElementById('video-sr'); 
         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
             b = y + h, //bottom
             visibleX, visibleY, visible;
@@ -252,8 +252,10 @@ function checkScroll() {
 
             if (visible > fraction) {
                 video.play();
+                videoSourceElm.src = './assets/pause-btn/play.svg'
             } else {
                 video.pause();
+                videoSourceElm.src = './assets/images/play.svg'
             }
 
 }
