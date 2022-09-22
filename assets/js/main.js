@@ -92,8 +92,8 @@ let thSwiper = new Swiper(".slider-3", {
   spaceBetween: 30,
   grabCursor: true,
   navigation: {
-    nextEl: ".mb-prev",
-    prevEl: ".mb-next",
+    nextEl: ".mb-next",
+    prevEl: ".mb-prev",
   }
 });
 
